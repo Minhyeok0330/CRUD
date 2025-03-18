@@ -21,8 +21,13 @@ from posts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index),
+    #Read(all)
     path('posts/<int:id>/', views.detail),
+    #Read(1)
     #posts/1/
     #posts/10/
     #posts/123/ 얘네들 다 내가 처리할테니까 걱정들 붙들어매쇼잉
+    path('posts/new/', views.new),
+    path('posts/create/', views.create),
+    #Create
 ]
