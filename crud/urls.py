@@ -22,7 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     #Read(all)
-    path('index/', views.index),
+    path('posts/', views.index),
 
     #Read(1)
     #posts/1/
@@ -35,5 +35,10 @@ urlpatterns = [
     path('posts/create/', views.create),
     
     #Delete
-    path('posts/<int:id>/delete/', views.delete)
+    path('posts/<int:id>/delete/', views.delete),
+
+    #Update - C와 R을 합쳐둔 기능
+    path('posts/<int:id>/edit/', views.edit),
+    path('posts/<int:id>/update/', views.update),
 ]
+
